@@ -22,7 +22,7 @@
       <ion-card-content>
         <ion-row class="ion-align-items-center">
           <ion-col size="8">
-            <rating [(ngModel)]="rate" readonly="false" size="default" (ngModelChange)="onModelChange($event)">
+            <rating [rate]="rate" readonly="false" size="default" (rateChange)="onRateChange($event)">
             </rating>
             <ion-label color="secondary">
               <b>{{ p.price | currency:'Rs ' }}</b>

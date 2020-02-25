@@ -4,6 +4,7 @@ import { ModalController } from '@ionic/angular';
 import { CartModalPage } from '../pages/cart-modal/cart-modal.page';
 import { BehaviorSubject } from 'rxjs';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -17,6 +18,7 @@ export class HomePage {
   @ViewChild('cart', { static: false, read: ElementRef }) fab: ElementRef;
 
   constructor(private cartService: CartService, private modalCtrl: ModalController) { }
+
 
   ngOnInit() {
     this.products = this.cartService.getProducts();
